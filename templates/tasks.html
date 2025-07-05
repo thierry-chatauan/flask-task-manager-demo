@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+      <div id="container">
+        <h2>Task List</h2>
+        <ul>
+            {% for task in tasks %}
+            <li> {{task}} </li>
+            {% endfor %}
+        </ul>
+      </div>
+{% endblock %}
