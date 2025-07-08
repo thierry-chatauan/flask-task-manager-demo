@@ -24,3 +24,8 @@ def add_task():
   print(tasks)
   return redirect(url_for("task_list"))
 
+@app.route("/deletetask/<int:task_id>")
+def delete_task(task_id):
+  if 0 <= task_id <= len(tasks):
+    tasks.pop(task_id)
+  return redirect(url_for("task_list"))
